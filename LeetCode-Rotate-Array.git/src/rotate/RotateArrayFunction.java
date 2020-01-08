@@ -14,7 +14,7 @@ public class RotateArrayFunction {
         System.out.println("first reverse: " + Arrays.toString(nums));
         
         // reverse "<--" will be "--><-----"
-        // Then swap left and right within the k limit
+        // Then swap left and right within the 0 to k - 1 index
         reverse(nums, 0, k - 1);
         
         System.out.println("second reverse: " + Arrays.toString(nums));
@@ -26,6 +26,7 @@ public class RotateArrayFunction {
         System.out.println("Solution: " + Arrays.toString(nums));
     }
     
+    // Simple reverse method
     public static void reverse(int[] nums, int start, int end){
     	// Swap beginning and end element
         while(start < end){
