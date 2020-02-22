@@ -41,4 +41,37 @@ public class RotateArrayFunction {
             end--;
         }
     }
+    
+    // Brute force solution: O(n * k) time, O(1) space, not using any extra space
+    public void rotate2(int[] nums, int k) {
+        int temp;
+        int previous;
+        
+        for (int i = 0; i < k; i++) {
+        	// Keep rotating the last element to the front 
+            previous = nums[nums.length - 1];
+            
+            for (int j = 0; j < nums.length; j++) {
+                temp = nums[j];
+                nums[j] = previous;
+                previous = temp;
+            }
+        }
+    }
+    
+    // Using extra space solution
+    public void rotate3(int[] nums, int k){
+    	int[] temp = new int[nums.length];
+    	
+    	// using mod and
+    	for(int i = 0; i < nums.length; i++){
+    		temp[(i + k) % nums.length] = nums[i];
+    	}
+    	
+    	for(int j = 0; j < nums.length; j++){
+    		nums[j] = temp[j];
+    	}
+    }
+    
+    
 }
