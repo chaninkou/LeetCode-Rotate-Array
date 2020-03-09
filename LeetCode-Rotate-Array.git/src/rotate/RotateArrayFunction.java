@@ -13,13 +13,13 @@ public class RotateArrayFunction {
         
         System.out.println("first reverse: " + Arrays.toString(nums));
         
-        // reverse "<--" will be "--><-----"
+        // reverse the elements before k
         // Then swap left and right within the 0 to k - 1 index
         reverse(nums, 0, k - 1);
         
         System.out.println("second reverse: " + Arrays.toString(nums));
         
-        // reverse "<-----" we can get "-->----->"
+        // reverse the elements after k
         // Then reverse back the element after k
         reverse(nums, k, nums.length - 1);
         
