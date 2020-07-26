@@ -1,4 +1,4 @@
-package rotate;
+package leetcode189;
 
 import java.util.Arrays;
 
@@ -26,7 +26,7 @@ public class RotateArrayFunction {
         System.out.println("Solution: " + Arrays.toString(nums));
     }
     
-    // Simple reverse method
+    // Reverse helper method
     public static void reverse(int[] nums, int start, int end){
     	// Swap beginning and end element
         while(start < end){
